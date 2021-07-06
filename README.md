@@ -1,10 +1,28 @@
+###################################################################################################
+
+  # # #       # # #     # # # #     #       #        # # #     #       #   # # # # #   #         #
+#           #       #   #       #   #       #      #       #   #       #   #           # #       #
+#           #       #   #       #   #       #      #           #       #   #           #   #     #
+#   # # #   #       #   # # # #       #   #          # # #     # # # # #   # # # #     #     #   #
+#       #   # # # # #   #   #           #                  #   #       #   #           #       # #
+#       #   #       #   #     #         #          #       #   #       #   #           #         #
+  # # #     #       #   #       #       #            # # #     #       #   # # # # #   #         #
+
+####################################################################################################
+
+This is a web application created by Gary Shen
+
+This web application is aiming to solve several problems as:
+    1. Expenses management in a project
+    2. Participants management in a project
+
 USER
+
     property{
         Username(string)
         Password(string)
         UserID(Key)
     }
-    
     activity{
         Register
         LogIn
@@ -19,6 +37,7 @@ USER
     }
 
 Project
+
     property{
         ProjectID(key)
         ProjectName(string)
@@ -27,13 +46,13 @@ Project
         ProjectTime(time)
         ProjectDescription(string)
     }
-
     activity{
         check how much does Username owes another Username across the Project(string)
         Summarize (only when all EventExpenses are balanced)
     }
 
 Event (An event will be created when any group/personal spending occurs)
+    
     property{
         EventID(key)
         EventName(string)
@@ -45,8 +64,14 @@ Event (An event will be created when any group/personal spending occurs)
         EventDescription(string)
         AllowOtherProjectParticipantsSee(boolean)
     }
-    
     activity{
         Total EventExpenses
         check how much does Username owes another Username(string)
     }
+
+
+WorkFlow:
+    User:
+        Create User:
+
+        LogIn: 
